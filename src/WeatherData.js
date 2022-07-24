@@ -1,7 +1,7 @@
 import "./WeatherData.css";
 
 export default function Weather() {
-  let weatherData = {
+  let weather = {
     city: "Vienna",
     date: "Sunday, July 10",
     time: "10:35",
@@ -16,34 +16,25 @@ export default function Weather() {
     <div className="Weather">
       <div className="row">
         <div className="col-5">
-          <h1 className="city">{weatherData.city}</h1>
+          <h1 className="city">{weather.city}</h1>
           <ul className="date">
-            <li>
-              <span className="currentDate">{weatherData.date}</span>
-            </li>
-            <li>
-              <span className="currentTime">{weatherData.time}</span>
-            </li>
+            <li>{weather.date}</li>
+            <li>{weather.time}</li>
           </ul>
           <br />
           <ul className="weatherdetails">
-            <li className="description">{weatherData.description}</li>
-            <li>
-              Humidity: <span className="humidity">{weatherData.humidity}</span>
-              %
-            </li>
-            <li>
-              Wind: <span className="wind">{weatherData.wind}</span> km/h
-            </li>
+            {weather.description}
+            <li>Humidity: {weather.humidity}%</li>
+            <li>Wind: {weather.wind}km/h</li>
           </ul>
         </div>
         <div className="col-4">
           <h1>
             <span className="currentTemperature">
-              {weatherData.currentTemperature}
+              {weather.currentTemperature}
             </span>
             <span className="units">
-              <a href="/" className="celciusLink" className="active">
+              <a href="/" className="celciusLink">
                 °C
               </a>{" "}
               |
@@ -54,11 +45,10 @@ export default function Weather() {
           </h1>
           <ul className="temperature">
             <li>
-              High: <span className="tempMax">23</span> °
-              <span className="unitSignCelcius">C</span>
+              High: 23 °<span className="unitSignCelcius">C</span>
             </li>
             <li>
-              Low: <span className="tempMin">13</span> °
+              Low: 13°
               <span className="unitSignFahrenheit">C</span>
             </li>
           </ul>
@@ -66,7 +56,7 @@ export default function Weather() {
         <div className="col-3">
           <h1>
             <img
-              src={weatherData.imgUrl}
+              src={weather.imgUrl}
               alt="Icon showing a sund and a cloud"
               className="leadEmoji"
             />

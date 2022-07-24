@@ -1,0 +1,54 @@
+.city,
+.date,
+.weatherdetails {
+  margin-left: 20px;
+}
+
+h1 {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-left: 0;
+  padding: 0;
+}
+
+a {
+  color: #5f6caf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00204a;
+}
+
+a.active {
+  color: #00204a;
+}
+
+a.active:hover {
+  cursor: default;
+}
+
+.leadEmoji {
+  width: 110px;
+  margin-left: -40px;
+}
+
+.weatherdetails {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.units {
+  font-size: 20px;
+  color: #5f6caf;
+  margin-left: 10px;
+}

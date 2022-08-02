@@ -2,7 +2,7 @@ import React from "react";
 import "./Forecast.css";
 
 export default function Forecast() {
-  let icon = "https://www.freeiconspng.com/uploads/cloud-icon-8.png";
+  let icon = "https://static.thenounproject.com/png/1197734-200.png";
   return (
     <div className="forecast">
       <div className="container">
@@ -10,7 +10,7 @@ export default function Forecast() {
           <div className="col-sm">
             <h5>Monday</h5>
             <img
-              source={icon}
+              src={icon}
               alt="Icon showing a sun and a cloud"
               className="forecastEmoji"
             />
@@ -19,7 +19,7 @@ export default function Forecast() {
           <div className="col-sm">
             <h5>Tuesday</h5>
             <img
-              source={icon}
+              src={icon}
               alt="Icon showing a sun and a cloud"
               className="forecastEmoji"
             />
@@ -28,7 +28,7 @@ export default function Forecast() {
           <div className="col-sm">
             <h5>Wednesday</h5>
             <img
-              source={icon}
+              src={icon}
               alt="Icon showing a sun and a cloud"
               className="forecastEmoji"
             />
@@ -37,7 +37,7 @@ export default function Forecast() {
           <div className="col-sm">
             <h5>Thursday</h5>
             <img
-              source={icon}
+              src={icon}
               alt="Icon showing a sun and a cloud"
               className="forecastEmoji"
             />
@@ -46,7 +46,7 @@ export default function Forecast() {
           <div className="col-sm">
             <h5>Friday</h5>
             <img
-              source={icon}
+              src={icon}
               alt="Icon showing a sun and a cloud"
               className="forecastEmoji"
             />

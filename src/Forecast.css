@@ -1,5 +1,4 @@
 h5,
-img,
 p {
   text-align: center;
   padding-top: 5px;
@@ -8,4 +7,7 @@ p {
 
 .forecastEmoji {
   width: 60px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }

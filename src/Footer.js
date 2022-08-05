@@ -1,9 +1,9 @@
 import React from "react";
-import "./SourceCode.css";
+import "./Footer.css";
 
-export default function SourceCode() {
+export default function Footer() {
   return (
-    <p className="sourceCode">
+    <p className="Footer">
       <a
         href="https://github.com/ChristinaFreisleben/react-weather-app"
         target="_blank"

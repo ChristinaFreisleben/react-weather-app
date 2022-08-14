@@ -1,6 +1,6 @@
 import "./App.css";
 
-import WeatherData from "./WeatherData";
+import Weather from "./Weather";
 import Search from "./Search";
 import Forecast from "./Forecast";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Search />
-      <WeatherData />
+      <Weather />
       <Forecast />
     </div>
   );

@@ -2,6 +2,8 @@ import "./Weather.css";
 import React, { useState } from "react";
 import axios from "axios";
 
+import FormatedDate from "./FormatedDate";
+
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ loaded: false });
 
@@ -13,7 +15,7 @@ export default function Weather() {
       wind: response.data.wind.speed,
       description: "Cloudy",
       humidity: response.data.main.humidity,
-      date: "Sunday, July 10",
+      date: new Date(response.data.dt * 1000),
       time: "10:35",
       imgUrl: "https://static.thenounproject.com/png/1197734-200.png",
     });
@@ -26,7 +28,9 @@ export default function Weather() {
           <div className="col-5">
             <h1 className="city">{weatherData.city}</h1>
             <ul className="date">
-              <li>{weatherData.date}</li>
+              <li>
+                <FormatedDate date={weatherData.date} />
+              </li>
               <li>{weatherData.time}</li>
             </ul>
             <br />

@@ -9,6 +9,11 @@ h1 {
   text-transform: capitalize;
 }
 
+form {
+  margin-left: 65%;
+  padding: 15px;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -51,4 +56,16 @@ a.active:hover {
   font-size: 20px;
   color: #5f6caf;
   margin-left: 10px;
+}
+
+.searchButton {
+  border: 2px solid #00204a;
+  background-color: rgba(255, 255, 255, 50%);
+  border-radius: 5px;
+}
+
+.searchButton:hover {
+  border: 2px solid #00204a;
+  background-color: #fcd6e2;
+  transition: all 200ms ease-in-out;
 }

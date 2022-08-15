@@ -60,11 +60,11 @@ export default function Temperature(props) {
         <ul className="temperature">
           <li>
             High: {Math.round(fahrenheitTemperatureMax)} °
-            <span className="unitSignCelcius">C</span>
+            <span className="unitSignCelcius">F</span>
           </li>
           <li>
             Low: {Math.round(fahrenheitTemperatureMin)} °
-            <span className="unitSignFahrenheit">C</span>
+            <span className="unitSignFahrenheit">F</span>
           </li>
         </ul>
       </div>

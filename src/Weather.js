@@ -20,7 +20,7 @@ export default function Weather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       date: new Date(response.data.dt * 1000),
-      imgUrl: "https://static.thenounproject.com/png/1197734-200.png",
+      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 

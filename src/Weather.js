@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import WeatherDetails from "./WeatherDetails";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -19,6 +20,7 @@ export default function Weather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
       imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -52,6 +54,7 @@ export default function Weather(props) {
           <input type="submit" value="🔍" className="searchButton" />
         </form>
         <WeatherDetails data={weatherData} />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

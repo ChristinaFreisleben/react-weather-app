@@ -21,8 +21,7 @@ export default function Weather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       date: new Date(response.data.dt * 1000),
-      lat: response.data.coord.lat,
-      lon: response.data.coord.lon,
+      coordinates: response.data.coord,
       imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -56,7 +55,7 @@ export default function Weather(props) {
           <input type="submit" value="🔍" className="searchButton" />
         </form>
         <WeatherDetails data={weatherData} />
-        <Forecast latitude={weatherData.lat} longitude={weatherData.lon} />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

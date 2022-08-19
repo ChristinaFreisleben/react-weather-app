@@ -10,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       loaded: true,
       currentTemperature: response.data.main.temp,
@@ -20,7 +21,8 @@ export default function Weather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       date: new Date(response.data.dt * 1000),
-      coordinates: response.data.coord,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
       imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -54,7 +56,7 @@ export default function Weather(props) {
           <input type="submit" value="🔍" className="searchButton" />
         </form>
         <WeatherDetails data={weatherData} />
-        <Forecast coordinates={weatherData.coordinates} />
+        <Forecast latitude={weatherData.lat} longitude={weatherData.lon} />
       </div>
     );
   } else {
